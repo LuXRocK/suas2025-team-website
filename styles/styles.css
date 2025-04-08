@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #00509E;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    margin: 40px auto;
+    max-width: 500px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex-grow: 1;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Resetowanie domyślnych marginesów i paddingów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylowanie ciała strony */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Nagłówek */
+header {
+    background-color: #002855;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Nawigacja */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sekcja główna */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Wspólne zdjęcie zespołu */
+.team-photo {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    /* background-color: green; */
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Sekcja indywidualnych członków */
+.team-members {
+    padding: 20px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; /* Linie oddzielające członków */
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.member-photo-container {
+    flex-shrink: 0; /* Zapewnia, że zdjęcie nie będzie się kurczyć */
+    margin-right: 20px; /* Odstęp między zdjęciem a informacjami */
+}
+
+.member-photo {
+    width: 120px; /* Szerokość zdjęcia */
+    height: 120px; /* Wysokość zdjęcia */
+    object-fit: cover; /* Utrzymanie proporcji zdjęcia */
+    border-radius: 50%; /* Zaokrąglone zdjęcie */
+}
+
+.member-info {
+    flex-grow: 1; /* Zajmuje całą dostępną przestrzeń */
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.member-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .member {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .member-photo-container {
+        margin-bottom: 10px;
+    }
+
+    .member-info {
+        width: 100%;
+    }
+}
+
+/* Footer na dole */
+footer {
+    background-color: #002855;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+.team-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.team-photo {
+    width: 100vw; /* Pełna szerokość okna przeglądarki */
+    max-width: 100%; /* Zapobiega przekroczeniu szerokości */
+    height: 80%;
+    display: block;
+    
+    /* Gradient maskujący od dołu */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.sponsors {
+    padding: 20px;
+}
+
+.sponsor {
+    flex-shrink: 0; /* Zapewnia, że zdjęcie nie będzie się kurczyć */
+    margin-right: 20px; /* Odstęp między zdjęciem a informacjami */
+}
+
+.sponsor-logo {
+    width: 100%; /* Szerokość zdjęcia */
+    height: 100%; /* Wysokość zdjęcia */
+    object-fit: cover; /* Utrzymanie proporcji zdjęcia */
+}
