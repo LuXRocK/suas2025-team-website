@@ -1,0 +1,161 @@
+/* Reset domyślnych styli */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylowanie całej strony */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Główna część strony */
+body {
+    flex-grow: 1;
+}
+
+/* Nagłówek */
+header {
+    background-color: #002855;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Nawigacja */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #00509E;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sekcja ogólna */
+section {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Zdjęcie zespołu */
+.team-photo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+
+    /* Efekt gradientu na dole */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Sekcja członków zespołu */
+.team-members {
+    padding: 20px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.member-photo-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.member-info {
+    flex-grow: 1;
+}
+
+.member-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.member-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Sponsorzy */
+.sponsors {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.sponsor-logo {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Stopka */
+footer {
+    background-color: #002855;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .member {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .member-photo-container {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .member-info {
+        width: 100%;
+    }
+}

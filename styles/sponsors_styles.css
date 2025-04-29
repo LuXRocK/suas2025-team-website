@@ -83,8 +83,14 @@ h2 {
 }
 
 footer {
-    background-color: #004080;
+    background-color: #002855;
     color: white;
-    padding: 15px 0;
+    text-align: center;
     margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
