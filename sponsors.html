@@ -4,34 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sponsors - High Flyers</title>
-    <link rel="stylesheet" href="styles/sponsors_styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/hf_logo_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://cse.google.com/cse.js?cx=a427705e6d1074ef3"></script>
 </head>
 <body>
     <header>
-        <h1>Our Sponsors</h1>
-        <nav>
+        <div class="header-content">
+            <img src="assets/hf_logo_white.png" alt="High Flyers Logo" class="header-logo">
+            <h1>High Flyers - SUAS 2025</h1>
+            <!--<h1>Our Sponsors</h1>-->
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        </div>
+        <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="vehicle.html">Vehicle</a></li>
                 <li><a href="progress.html">Progress</a></li>
+                <li><a href="sponsors.html" class="chosen-page">Sponsors</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button id="search-toggle" aria-label="Toggle search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </li>
+                <li id="search-container" style="display: none;">
+                    <div class="gcse-search"></div>
+                </li>
             </ul>
         </nav>
     </header>
     
-    <section>
+    <section class="sponsors">
         <h2>Meet Our Sponsors</h2>
         <p>We are grateful for the support of our sponsors who make this project possible.</p>
     </section>
 
-    <section class="sponsors">
+    <section class="sponsors logos">
         <div class="sponsor">
             <a href="https://www.polsl.pl" target="_blank">
                 <img src="assets/sponsors/polsl.jpg" alt="POLSL" class="sponsor-logo">
             </a>
         </div>
-        <div class="sponsor">
+        <div class="sponsor" id="dron-edu">
             <a href="https://dron.edu.pl/" target="_blank">
                 <img src="assets/sponsors/dronedu.png" alt="DRONEDU" class="sponsor-logo">
             </a>
@@ -41,10 +58,20 @@
                 <img src="assets/sponsors/botland.png" alt="BOTLAND" class="sponsor-logo">
             </a>
         </div>
+        <div class="sponsor">
+            <a href="https://aiut.com/?gad_source=1&gad_campaignid=21540886940&gclid=Cj0KCQjwrPHABhCIARIsAFW2XBMLqti1SyccAwQbkCHExTMnqKT581kk0Iv9IYhB5EJUrvSczMfe-4AaAi0pEALw_wcB" target="_blank">
+                <img src="assets/sponsors/aiut.png" alt="BOTLAND" class="sponsor-logo">
+            </a>
+        </div>
     </section>
     
     <footer>
         <p>&copy; 2025 High Flyers - SUAS Team</p>
     </footer>
+
+    
+    <script src="script.js"></script>
+
+
 </body>
 </html>

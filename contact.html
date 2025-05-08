@@ -4,29 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - High Flyers</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/hf_logo_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://cse.google.com/cse.js?cx=a427705e6d1074ef3"></script>
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
-        <nav>
+        <div class="header-content">
+            <img src="assets/hf_logo_white.png" alt="High Flyers Logo" class="header-logo">
+            <h1>High Flyers - SUAS 2025</h1>
+            <!--<h1>Contact Us</h1>-->
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        </div>
+        <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="vehicle.html">Vehicle</a></li>
                 <li><a href="progress.html">Progress</a></li>
                 <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.html" class="chosen-page">Contact</a></li>
+                <li>
+                    <button id="search-toggle" aria-label="Toggle search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </li>
+                <li id="search-container" style="display: none;">
+                    <div class="gcse-search"></div>
+                </li>
             </ul>
         </nav>
     </header>
     
     <section>
         <h2>Get in Touch</h2>
-        <p>If you have any questions or would like to learn more, feel free to contact us!</p>
+        <p>If you have any questions or would like to learn more, feel free to contact us via email:</p>
+        <p><a href="mailto:highflyers.polsl@gmail.com" target="_blank" aria-label="Email">
+        highflyers.polsl@gmail.com
+        </a></p>
+        <p>Or follow us on our social media platforms:</p>
+        <div class="social-icons">
+            <a href="https://https://www.facebook.com/high.flyers.polsl" target="_blank" aria-label="Facebook" class="social facebook">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/highflyers.polsl" target="_blank" aria-label="Instagram" class="social instagram">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
     </section>
     
     <footer>
         <p>&copy; 2025 High Flyers - SUAS Team</p>
     </footer>
+
+    
+    <script src="script.js"></script>
+
+    
 </body>
 </html>

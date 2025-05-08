@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Nagłówek i stopka */
+header, footer {
+    background-color: #081424;
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+footer {
+    padding: 15px;
+    margin-top: auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+    padding: 10px 20px;
+    flex-wrap: wrap; 
+    text-align: center;
+}
+
+.header-logo{
+    height: 50px;
+    width: auto;
+}
+
+.chosen-page{
+    background-color: #00558E;
+}
+
+#search-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#search-toggle:hover {
+    color: #cccccc;
+}
+
+/* Nawigacja */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #0077B6;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Formatowanie ogólnie dla sekcji */
+section {
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-size: 1.5em;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social {
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social:hover  {
+    transform: scale(1.1);
+}
+
+.social i {
+    pointer-events: none;
+}
+
+.instagram {
+    background-color: #f10175;
+}
+
+.instagram:hover {
+    background-color: #cb0163;
+}
+
+.facebook {
+    background-color: #0966fe;
+}
+
+.facebook:hover {
+    background-color: #0051cc;
+}
+
+.email {
+    background-color: #c2b1dd;
+}
+
+.email:hover {
+    background-color: #a78bcd;
+}
+
+/* Sekcja z informacjami o drużynie */
+
+/* Zdjęcie zespołu */
+.team-photo {
+    width: 100vw;
+    max-width: 100%;
+    height: 80%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Członkowie zespołu */
+.team-members {
+    padding: 20px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.member-photo-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info {
+    flex-grow: 1;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.member-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Sponsorzy */
+
+.sponsors {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.sponsors h2 {
+    color: #004080;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.sponsor {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 220px;
+}
+
+.sponsor:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sponsor-logo {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+#dron-edu {
+    padding: 30px;
+}
+
+/* Progress */
+
+.collapsible-section {
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease;
+    padding: 0 1rem; 
+}
+
+.collapsible-section.active .section-content {
+    max-height: 5000px; 
+    padding: 1rem;
+}
+
+.collapse-btn {
+    display: none;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.collapse-btn:hover {
+    background-color: #ddd;
+}
+
+.collapsible-section.active .collapse-btn {
+    display: block;
+}
+
+.progress-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+
+/* Responsywność*/
+
+@media (max-width: 768px) {
+    .member {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .member-photo-container {
+        margin-bottom: 10px;
+    }
+
+    .member-info {
+        width: 100%;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+}

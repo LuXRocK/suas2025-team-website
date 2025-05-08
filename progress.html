@@ -4,29 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress - High Flyers</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/hf_logo_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://cse.google.com/cse.js?cx=a427705e6d1074ef3"></script>
 </head>
 <body>
     <header>
-        <h1>Project Progress</h1>
-        <nav>
+        <div class="header-content">
+            <img src="assets/hf_logo_white.png" alt="High Flyers Logo" class="header-logo">
+            <h1>High Flyers - SUAS 2025</h1>
+            <!--<h1>Project Progress</h1>-->
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        </div>
+        <nav class="mobile-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="vehicle.html">Vehicle</a></li>
+                <li><a href="progress.html" class="chosen-page">Progress</a></li>
                 <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <button id="search-toggle" aria-label="Toggle search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </li>
+                <li id="search-container" style="display: none;">
+                    <div class="gcse-search"></div>
+                </li>
             </ul>
         </nav>
     </header>
     
     <section>
         <h2>Our Progress</h2>
-        <p>Follow our journey as we develop and refine our SUAS competition project.</p>
+        <p>Follow our journey as we develop and refine our SUAS competition project. Click on each post to read more.</p>
+    </section>
+
+    <section class="collapsible-section">
+        <div class="section-header">
+            <h2>21.04.2025 - In lab tests of software solution</h2>
+        </div>
+        <div class="section-content">
+            <p>Since we're tasked with object detection and classification we started on some software approach of that topic. We couldn't get a hand on all of the 
+                objects from the object list to train a YOLO model for our needs, so we decided to use a pre-trained model.
+            </p>
+            <img src="assets/progress/yolo.png" alt="YOLO Model" class="progress-image">
+            <p>The object in the image above is a umbrella but the YOLO model mistakes it for a sports ball. We realised that 
+                even though the classification is wrong, the model does a good job at detecting objects on the ground. 
+                We decided to use this model as a image cropper, we take the bounding box of the detected object and crop the image. 
+            </p>
+            <img src="assets/progress/cropped.png" alt="Cropped Image" class="progress-image">
+            <p>
+                After cropping the image we decided to use a large language model runnig locally on the Jetson to classify the object.
+            </p>
+            <img src="assets/progress/llm.png" alt="LLM Model" class="progress-image">
+            <p>
+                The image above shows LLM's reasoning process and final answer. We can see that it can classify the object correctly.
+                We decided to use this approach because we can use the same model for all of the objects on the list.
+            </p>
+            <button class="collapse-btn">Fold Post</button>
+        </div>
     </section>
     
     <footer>
         <p>&copy; 2025 High Flyers - SUAS Team</p>
     </footer>
+
+    
+    <script src="script.js"></script>
+
+    <script>
+        document.querySelectorAll('.collapsible-section').forEach(section => {
+            const header = section.querySelector('.section-header');
+            const collapseBtn = section.querySelector('.collapse-btn');
+    
+            header.addEventListener('click', () => {
+                section.classList.toggle('active');
+            });
+    
+            if (collapseBtn) {
+                collapseBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // nie wywołuj ponownie kliknięcia nagłówka
+                    section.classList.remove('active');
+                });
+            }
+        });
+    </script>
+
+
 </body>
 </html>
